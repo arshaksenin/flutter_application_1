@@ -12,7 +12,7 @@ class Splash extends StatelessWidget {
     
     return Scaffold(
 
-      backgroundColor: Color.fromARGB(255, 0, 0, 0),
+      backgroundColor: const Color.fromARGB(255, 255, 236, 70),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -22,12 +22,13 @@ class Splash extends StatelessWidget {
             //   size: 120,
             //   color: Colors.blueAccent
             //   ,),
-            Image(image: AssetImage("assets/icons/spot.png"),height: 100,width: 100,),
-            Text("Spotify",style: TextStyle(
+            Image(image: AssetImage("assets/icons/snap.png"),height: 100,width: 100,),
+            Text("Snapchat",style: TextStyle(
               fontSize: 30,
               color: Colors.white,
               fontWeight: FontWeight.bold
-            ),)
+              
+           ),)
           ],
         ),
       ),
