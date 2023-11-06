@@ -17,12 +17,7 @@ class Splash extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Icon(
-            //   Icons.tiktok,
-            //   size: 120,
-            //   color: Colors.blueAccent
-            //   ,),
-            Image(image: AssetImage("assets/icons/snap.png"),height: 100,width: 100,),
+           Image(image: AssetImage("assets/icons/snap.png"),height: 100,width: 100,),
             Text("Snapchat",style: TextStyle(
               fontSize: 30,
               color: Colors.white,
