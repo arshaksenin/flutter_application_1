@@ -1,8 +1,4 @@
-import 'dart:async';
-import 'dart:html';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/LoginPage.dart';
-import 'package:lottie/lottie.dart';
 import 'package:flutter_application_1/Home.dart';
 
 void main(){
@@ -14,8 +10,9 @@ class Stateful_Login extends StatefulWidget{
   State<Stateful_Login> createState() => _Stateful_LoginState();
     
 }
- class _Stateful_LoginState extends State<Stateful_Login> {
-  
+  class _Stateful_LoginState extends State<Stateful_Login> {
+  final namecntrl = TextEditingController();
+  final passcntrl = TextEditingController();
   final validkey = GlobalKey<FormState>();
 
 
@@ -23,7 +20,7 @@ class Stateful_Login extends StatefulWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Login"),
+        title: const Text("Login Page"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -43,6 +40,7 @@ class Stateful_Login extends StatefulWidget{
                Padding(
                     padding: EdgeInsets.all(15.0),
                     child: TextFormField(
+                      controller: namecntrl,
                       validator: (email){
                         if(email!.isEmpty || !email.contains("@") || !email.contains("gmail.com")){
                          return "Invalid Email adrress";
@@ -58,7 +56,7 @@ class Stateful_Login extends StatefulWidget{
                     ),
                   ),
         
-              Padding(
+                 Padding(
                    padding: EdgeInsets.only(bottom: 15, left: 15, right: 15),
                     child: TextFormField(
                       validator: (password){
@@ -78,7 +76,7 @@ class Stateful_Login extends StatefulWidget{
                     ),
                   ),
 
-                MaterialButton(
+                 MaterialButton(
                  height: 50,
                  minWidth: 170,
                  onPressed: (){
@@ -90,14 +88,16 @@ class Stateful_Login extends StatefulWidget{
                           backgroundColor: Colors.red,
                           content: Text("Invalid/ email password")));
                   }
+                  namecntrl.clear();
+                  passcntrl.clear();
 
                  },
                  color: Colors.green,
                  shape:const StadiumBorder(),
                  child:  const Text("Login"),
-                ),
+                 ),
 
-                TextButton(
+                 TextButton(
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
                   }, 
@@ -112,9 +112,7 @@ class Stateful_Login extends StatefulWidget{
                         fontWeight: FontWeight.bold))
                     ]
                   ))
-              
               )
-                
             ],
           ),
         ),
