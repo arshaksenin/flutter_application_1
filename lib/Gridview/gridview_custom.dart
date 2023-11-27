@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'Custom_widget.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: GridViiew5(),
+    home: GridView5(),
   ));
 }
 
-class GridViiew5 extends StatelessWidget {
-
+class GridView5 extends StatelessWidget {
   var Countries = [
     "NORWAY",
     "SPAIN",
