@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Listview2.dart';
-import 'package:flutter_application_1/Listview3.dart';
-import 'package:flutter_application_1/Listview4.dart';
-void main(){
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: WaTabbar(),
-  ));
-}
+import 'package:flutter_application_1/assignments/ListUI.dart';
+import 'package:flutter_application_1/assignments/WAcalls.dart';
+import 'package:flutter_application_1/assignments/WAmessages.dart';
+
 
 class WaTabbar extends StatelessWidget {
 
@@ -16,11 +11,15 @@ class WaTabbar extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        appBar: AppBar(actions: [
-          Icon(Icons.camera_alt_outlined),
+        appBar: AppBar(
+          actions: [
+          Icon(Icons.camera_alt_outlined,color: Colors.white,),
           SizedBox(width: 15,),
-          Icon(Icons.search_rounded),
-          PopupMenuButton(itemBuilder: (context){
+          Icon(Icons.search_rounded,color: Colors.white,),
+          PopupMenuButton(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            iconColor: Colors.white,
+            itemBuilder: (context){
             return [
             const PopupMenuItem(child: Text("New group")),
             const PopupMenuItem(child: Text("New broadcast")),
@@ -29,21 +28,21 @@ class WaTabbar extends StatelessWidget {
             ];
           })
           ],
-          backgroundColor: Colors.green[400],
-          title: const Text("Whatsapp"),
+          backgroundColor: Color.fromARGB(255, 75, 172, 124),
+          title: const Text("WhatsApp",style: TextStyle(color: Colors.white),),
           bottom: const TabBar(
             indicatorColor: Colors.white,
             indicatorPadding: EdgeInsets.only(top: 15,),
-            tabs: [Text("Chats"),
-            Text("Status"),Text("Call")],
+            tabs: [Text("Chats",style: TextStyle(color: Colors.white),),
+            Text("Status",style: TextStyle(color: Colors.white),),
+            Text("Call",style: TextStyle(color: Colors.white),)],
             ),
         ),
         body: TabBarView(children: [
-          // ListView2(),
-          // ListView3(),
-          // ListView4(),
-
-        ])
+          Mssgs(),
+          Europe(),
+          WaCalls(),
+        ]),
       ),
     );
   }

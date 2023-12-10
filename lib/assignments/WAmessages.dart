@@ -1,10 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(MaterialApp(home: Mssgs(),));
-}
-
 class Mssgs extends StatelessWidget {
   
   var name = ["Otis","Ruby","Max","Adam","Jacob","Mave","Jason","James",];
@@ -83,6 +79,12 @@ body: ListView(
     ),
   ))
 ),
+
+floatingActionButton: 
+        FloatingActionButton(
+        backgroundColor:Color.fromARGB(255, 75, 172, 124),
+        onPressed: (){},
+        child: Icon(Icons.chat_outlined,color: Colors.white,)),
     );
  }
 }

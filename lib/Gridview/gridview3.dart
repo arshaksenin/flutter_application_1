@@ -14,7 +14,7 @@ var imgs = [
   
   "assets/images/norway.jpg",
   "assets/images/spain.jpg",
-  "assets/images/croatia.jpg",
+  "assets/images/italy.jpg",
   "assets/images/iceland.jpg",
   "assets/images/france.jpg",
   "assets/images/italy.jpg",

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/assignments/WAmessages.dart';
+import 'package:flutter_application_1/assignments/WAtabs.dart';
 
 void main(){
   runApp(MaterialApp(
@@ -20,7 +20,7 @@ class _WASplashstate extends State<WASplash> {
   void initState() {
     Timer( Duration(seconds: 3), () { 
      Navigator.pushReplacement(context, MaterialPageRoute(
-      builder: (context) => Mssgs()));
+      builder: (context) => WaTabbar()));
     });
     super.initState();
   } 
